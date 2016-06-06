@@ -1,3 +1,66 @@
-// Place all the styles related to the articles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  font-size: 14px;
+  margin: 0 auto;
+  position: relative;
+  height: 100%
+}
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+
+
+.mainBackgroundImage {
+  background-color: blue;
+  width: 100%;
+  position: fixed;
+  height: 100%;
+  background-image: url(http://bijodoku.com/wp-content/uploads/2016/02/senapr01.jpg);
+  background-size: cover;
+}
+
+.sideMenu {
+  background-color: red;
+  width: 300px;
+  opacity: 0.3;
+  position: fixed;
+  height: 100%;
+  float: left;
+}
+
+.ladiesContent {
+  background-color: white;
+  width: 960px;
+  overflow: auto;
+  margin-top: 10px;
+  margin-right: 10px;
+  float: right;
+  height: 100%;
+}
+
+.ladiesContentTitle {
+  padding-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  height: 80px;
+}
+
+.ladiesContentBorder {
+  width: 100px;
+  height: 30px;
+  margin: 0 auto;
+  border-top: 1px gray solid;
+}
+
+.ladyBox {
+  background-color: red;
+  background-image: url(http://bijodoku.com/wp-content/uploads/2016/05/yuka-nakao01-3.jpg);
+  background-size: cover;
+  height: 300px;
+  border: 1px solid white;
+}
+
+.ladyBox:hover {
+
+}

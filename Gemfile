@@ -46,3 +46,4 @@ group :development do
 end
 
 gem 'pry-rails'
+gem 'activeadmin', '~> 1.0.0.pre2'

@@ -1,23 +1,13 @@
-<div class="mainBackgroundImage">
-
-  <div class="sideMenu"></div>
-  <div class="ladiesContent">
-
-    <div class="ladiesContentTitle">
-      RECENT ARTICLES
-    </div>
-    <div class="ladiesContentBorder">
-    </div>
-
-    <div class="row">
-      <% @articles.each do |article| %>
-        <%= link_to article_path(article) do %>
-          <div class="col-md-6 ladyBox"></div>
-        <% end %>
-      <% end %>
-    </div>
-
-  </div>
+<div class="ladiesContentTitle">
+  RECENT ARTICLES
+</div>
+<div class="ladiesContentBorder">
 </div>
 
-
+<div class="row">
+  <% @articles.each do |article| %>
+    <%= link_to article_path(article) do %>
+      <div class="col-md-6 ladyBox"></div>
+    <% end %>
+  <% end %>
+</div>

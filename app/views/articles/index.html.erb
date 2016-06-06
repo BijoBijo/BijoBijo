@@ -10,20 +10,12 @@
     </div>
 
     <div class="row">
-      <div class="col-md-6 ladyBox"></div>
-      <div class="col-md-6 ladyBox"></div>
-      <div class="col-md-6 ladyBox"></div>
-      <div class="col-md-6 ladyBox"></div>
-      <div class="col-md-6 ladyBox"></div>
-      <div class="col-md-6 ladyBox"></div>
-      <div class="col-md-6 ladyBox"></div>
-      <div class="col-md-6 ladyBox"></div>
-      <div class="col-md-6 ladyBox"></div>
-      <div class="col-md-6 ladyBox"></diviv>
-      <div class="col-md-6 ladyBox"></div>
-      <div class="col-md-6 ladyBox"></div>
+      <% @articles.each do |article| %>
+        <%= link_to article_path(@article), {:class => btn_sign_up} do %>
+          <div class="col-md-6 ladyBox"></div>
+        <% end %>
+      <% end %>
     </div>
-    <div>
 
   </div>
 </div>

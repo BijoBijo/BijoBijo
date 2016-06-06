@@ -11,7 +11,7 @@
 
     <div class="row">
       <% @articles.each do |article| %>
-        <%= link_to article_path(@article), {:class => btn_sign_up} do %>
+        <%= link_to article_path(article) do %>
           <div class="col-md-6 ladyBox"></div>
         <% end %>
       <% end %>

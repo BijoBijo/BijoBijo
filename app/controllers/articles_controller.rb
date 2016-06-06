@@ -4,11 +4,11 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.find(article_params)
+    @article = Article.find(article_params[:id])
   end
 
   private
   def article_params
-    params.permi(:id)
+    params.permit(:id)
   end
 end

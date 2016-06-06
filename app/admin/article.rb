@@ -18,6 +18,7 @@ form do |f|
     f.input :title
     f.input :content
   end
+  f.actions
 end
 
 permit_params :title, :content

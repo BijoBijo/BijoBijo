@@ -13,5 +13,12 @@ ActiveAdmin.register Article do
 #   permitted
 # end
 
+form do |f|
+  f.inputs do
+    f.input :title
+    f.input :content
+  end
+end
 
+permit_params :title, :content
 end

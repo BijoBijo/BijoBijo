@@ -81,12 +81,14 @@ h1,h2,h3,h4,h5,h6,p {
 
 .ladiesContent {
   background-color: white;
-  width: 960px;
+
+  width: calc(100% - 320px);
   overflow: auto;
   margin-top: 10px;
   margin-right: 10px;
   float: right;
   height: 100%;
+  z-index: 4;
 }
 
 .ladiesContentTitle {
@@ -108,10 +110,59 @@ h1,h2,h3,h4,h5,h6,p {
   background-size: cover;
   height: 300px;
   border: 1px solid white;
+  position: relative;
+  position: absolute;
+    left: 0%;
+    top: 0px;
 }
 
-.ladyBox:hover {
+.ladyMaskView {
+  width: 100%;
+  height: 300px;
+  border: 1px solid white;
+  transition-duration: 1s;
+  position: absolute;
+    left: 0%;
+    top: 0px;
+  .hoverDisplayTitle {
+    transition-duration: 1s;
+  }
+}
 
+
+.hoverDisplayTitle {
+  text-align: center;
+  padding-top: 140px;
+  display: none;
+  color: white;
+}
+
+.ladyMaskView:hover {
+  background-color: rgba(254, 83, 63, 0.7);
+  .hoverDisplayTitle {
+    display: block;
+  }
+
+  .hoverDisplayTitleBorder {
+    border-bottom: 1px solid white;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 639px) {
+  .sideMenu {
+    display: none;
+  }
+
+  .ladiesContent {
+    width: calc(100% - 20px);
+  }
 }
 
 

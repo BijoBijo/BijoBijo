@@ -1,24 +1,19 @@
 ActiveAdmin.register Article do
+  permit_params :title, :content, images_attributes: [:id, :name, :status, :_destroy]
 
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
-# permit_params :list, :of, :attributes, :on, :model
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if resource.something?
-#   permitted
-# end
+  form do |f|
+    f.inputs do
+      f.input :title
+      f.input :content
+    end
 
-form do |f|
-  f.inputs do
-    f.input :title
-    f.input :content
+    f.inputs do
+      f.has_many :images, heading: 'Top Image', allow_destroy: true, new_record: true do |nest_f|
+        nest_f.input :name
+        nest_f.input :status, input_html: { value: :top }, as: :hidden
+      end
+    end
+
+    f.actions
   end
-end
-
-permit_params :title, :content
 end

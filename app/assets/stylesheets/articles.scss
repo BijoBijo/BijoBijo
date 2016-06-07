@@ -10,6 +10,32 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 
+// contents list
+.siteContentsLists {
+  width: 250px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 100px;
+  cursor: pointer;
+}
+
+.siteContentsList {
+  list-style: none;
+  text-align: right;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 0.5px solid #dcdcdc;
+}
+
+.siteContentsList:hover {
+  background-color: rgba(252, 142, 151, 0.3);
+}
+
+.siteListLink:hover {
+  text-decoration: none;
+}
+
 .mainBackgroundImage {
   width: 100%;
   position: fixed;
@@ -21,11 +47,33 @@ h1,h2,h3,h4,h5,h6,p {
 .sideMenu {
   background-color: red;
   width: 300px;
-  opacity: 0.3;
+  background-color: rgba(252, 142, 151, 0.5);
   position: fixed;
   height: 100%;
   float: left;
+  transition-duration: 1s;
 }
+
+.sideMenu:hover {
+  background-color: rgba(252, 142, 151, 0.8);
+}
+
+.siteLogoImage {
+  margin-top: 80px;
+  img {
+    width: 240px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.siteLogoTitle {
+  font-size: 10px;
+  text-align: center;
+  color: white;
+}
+
+//index
 
 .ladiesContent {
   background-color: white;
@@ -63,3 +111,51 @@ h1,h2,h3,h4,h5,h6,p {
 .ladyBox:hover {
 
 }
+
+
+// aricle show
+
+.articleShowContent {
+  width: 100%;
+  height: 300px;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.articleTopImage {
+  background-image: url(http://bijodoku.com/wp-content/uploads/2016/05/yuka-nakao01-3.jpg);
+  background-size: cover;
+  height: 600px;
+  width: 100%;
+}
+
+.articleShowTitle {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.articleSubTitle {
+  font-size: 17px;
+  border-bottom: 1px solid red;
+  border-top: 1px solid red;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.articleContentText {
+  font-size: 16px;
+  line-height: 2.0;
+  color: gray;
+}
+
+
+
+
+
+
+
+

@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20160606112325) do
   create_table "articles", force: :cascade do |t|
     t.string   "title",      limit: 255
     t.text     "content",    limit: 65535
+    t.integer  "status",     limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-horizontal" role="form">
+        <%= bootstrap_form_for [:admin, @article] do |f| %>
+          <%= f.text_field :title, placeholder: 'タイトルを入力してください' %>
+          <%= f.hidden_field :status, value: :release %>
+
+          <%= f.fields_for :images do |top_image_f| %>
+            <%= top_image_f.file_field :name %>
+            <%= top_image_f.hidden_field :status, value: :top %>
+          <% end %>
+
+          <%= f.text_area :content, placeholder: '記事を入力してください' %>
+
+          <%= f.submit class: 'btn-primary'%>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div id="preview-js" class="preview">
+      </div>
+  </div>
+</div>

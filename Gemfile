@@ -45,8 +45,10 @@ group :development do
 end
 
 gem 'pry-rails'
-gem 'activeadmin', '~> 1.0.0.pre2'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '>= 3.2'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'bootstrap_form'
+gem 'config'
+gem 'fog'

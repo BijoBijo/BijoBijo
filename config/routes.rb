@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  ActiveAdmin.routes(self)
   root 'articles#index'
 
   resources :articles, only: [:index, :show]
+
+  namespace :admin do
+    resources :articles
+  end
 end

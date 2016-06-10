@@ -12,8 +12,8 @@
 !/log/.keep
 /tmp
 
-/uploads/
 /Gemfile.lock
+/uploads/*
 
 config/settings.local.yml
 config/settings/*.local.yml

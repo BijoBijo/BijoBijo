@@ -1,5 +1,5 @@
 CarrierWave.configure do |config|
-    config.storage = :fog
+  config.storage = :fog
   config.fog_credentials = {
     provider: 'AWS',
     aws_access_key_id: Settings.aws[:access_key_id],

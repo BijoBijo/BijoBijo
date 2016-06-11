@@ -52,3 +52,5 @@ gem 'rmagick'
 gem 'bootstrap_form'
 gem 'config'
 gem 'fog'
+gem 'marked-rails'
+gem "redcarpet"

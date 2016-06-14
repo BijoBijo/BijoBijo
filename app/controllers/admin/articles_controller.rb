@@ -2,6 +2,7 @@ class Admin::ArticlesController < ApplicationController
   layout 'admin.html.erb'
 
   def index
+    @articles = Article.order(created_at: :desc)
   end
 
   def new

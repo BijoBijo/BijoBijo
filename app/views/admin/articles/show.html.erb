@@ -3,4 +3,5 @@
     <%= @article.title %>
   </h1>
   <%= image_tag @article.images.top.first.name %>
+  <%= convert_to_markdown(@article.content) %>
 </div>

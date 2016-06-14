@@ -1,7 +1,13 @@
 class Admin::ArticlesController < ApplicationController
   layout 'admin.html.erb'
 
+  before_action :set_article, only: [:show, :edit, :update, :destroy]
+
   def index
+    @articles = Article.order(created_at: :desc)
+  end
+
+  def show
   end
 
   def new
@@ -21,5 +27,9 @@ class Admin::ArticlesController < ApplicationController
   private
   def article_params
     params.require(:article).permit(:title, :content, :status, images_attributes: [:id, :name, :status])
+  end
+
+  def set_article
+    @article = Article.find(params[:id])
   end
 end

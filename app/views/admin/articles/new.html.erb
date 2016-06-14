@@ -1,25 +1,39 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
+<div class="container new-article">
+  <div class="row article-form">
+    <div class="col-md-6 editor-area">
       <div class="form-horizontal" role="form">
         <%= bootstrap_form_for [:admin, @article] do |f| %>
-          <%= f.text_field :title, placeholder: 'タイトルを入力してください' %>
+          <%= f.label :title, "タイトル", class: "form-label" %>
+          <%= f.text_field :title, id: "title-js", hide_label: true, placeholder: 'タイトルを入力してください', onkeyup: "previewMarkDown($('#title-js'), $('#preview-title-js'))" %>
           <%= f.hidden_field :status, value: :release %>
 
           <%= f.fields_for :images do |top_image_f| %>
-            <%= top_image_f.file_field :name %>
+            <%= f.label :name, "トップ画像", class: "form-label" %>
+            <%= top_image_f.file_field :name, hide_label: true %>
             <%= top_image_f.hidden_field :status, value: :top %>
           <% end %>
 
-          <%= f.text_area :content, placeholder: '記事を入力してください' %>
+          <%= f.label :name, "記事", class: "form-label" %>
+          <%= f.text_area :content, id: "content-js", class: "content-text-area", hide_label: true, placeholder: '記事を入力してください', onkeyup: "previewMarkDown($('#content-js'), $('#preview-content-js'))" %>
 
           <%= f.submit class: 'btn-primary'%>
         <% end %>
       </div>
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-6 editor-area">
       <div id="preview-js" class="preview">
+        <div id="preview-title-js" class="articleShowTitle"></div>
+        <div id="preview-content-js" class="articleContents"></div>
       </div>
+    </div>
+
   </div>
 </div>
+
+<script>
+  var $contentForm = $('#content-js');
+  var $previewContent = $('#preview-content-js');
+
+  previewDropPedImage($contentForm, $previewContent);
+</script>

@@ -1,7 +1,24 @@
 // Place all the styles related to the admin::articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.new-article {
+  .article-form {
+    margin-top: 55px;
 
-.btn-primary {
-  margin-left: -15px;
+    .editor-area {
+      background-color: #fff;
+    }
+
+    .form-label {
+      font-size: 20px;
+      margin-left: -15px;
+    }
+
+    .content-text-area {
+      height: 350px;
+    }
+    .btn-primary {
+      margin-left: -15px;
+    }
+  }
 }

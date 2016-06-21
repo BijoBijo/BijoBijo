@@ -16,3 +16,4 @@ CarrierWave.configure do |config|
         config.asset_host = Settings.aws[:asset_host]
     end
 end
+

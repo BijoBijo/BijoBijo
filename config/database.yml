@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: BijoBijo_production
-  username: BijoBijo
-  password: <%= ENV['BIJOBIJO_DATABASE_PASSWORD'] %>
+  username: root
+  password: 

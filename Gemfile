@@ -54,3 +54,7 @@ gem 'config'
 gem 'fog'
 gem 'marked-rails'
 gem "redcarpet"
+
+group :producdon, :staging do
+  gem 'unicorn' 
+end

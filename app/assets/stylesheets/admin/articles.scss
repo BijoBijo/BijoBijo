@@ -22,3 +22,27 @@
     }
   }
 }
+
+
+
+.articleContents {
+  h2 {
+    font-size: 17px;
+    border-bottom: 1px solid red;
+    border-top: 1px solid red;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  p img {
+    width: 100%;
+  }
+}
+
+.preview-area {
+  position: fixed !important;
+  height: 100%;
+  width: 50%;
+  right: 0px;
+  overflow: scroll;
+}
